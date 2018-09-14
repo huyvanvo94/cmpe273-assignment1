@@ -6,6 +6,8 @@ import uuid
 import message_pb2 as chat
 import message_pb2_grpc as rpc
 
+import hashlib
+
 from tkinter import *
 from tkinter import simpledialog
 
@@ -13,6 +15,13 @@ from tkinter import simpledialog
 channel = grpc.insecure_channel('localhost:50051')
 
 LIMIT = 0 # limit
+
+def encrypt_string(hash_string):
+    return hashlib.sha256(hash_string.encode()).hexdigest()
+
+def decrpt(str):
+    return hashlib.sha256(str.decode())
+
 
 
 class Client:

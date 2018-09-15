@@ -1,7 +1,6 @@
 import grpc
 from concurrent import futures
 from lru import LRUCache
-from lru import ChatHistory
 
 
 import time
@@ -12,10 +11,26 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
     def __init__(self):
         self.chats = []
         self.max = 1
+        self.index = 0
+        self.lastKnown = 0
+        self.cache = LRUCache(capacity=self.max)
 
 
     def ChatStream(self, request, context):
+        lastindex = self.lastKnown
+        # For every client a infinite loop starts (in gRPC's own managed thread)
+        while True:
+            # Check if there are any new messages
+            while self.index > lastindex:
+                n = self.cache.get(lastindex)
+                print(n)
+                lastindex += 1
+                if n != -1:
+                    yield n
+                else:
+                    self.lastKnown = n
 
+        '''
         lastindex = 0
         lastuuid = None
 
@@ -30,16 +45,19 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
                     lastindex += 1
                     yield n
 
-
+        '''
 
 
 
     def SendNote(self, request, context):
 
+        self.cache.put(self.index, request)
+        self.index += 1
+        ''' 
         if len(self.chats) >= self.max:
             del self.chats[0]
 
-        self.chats.append(request)
+        self.chats.append(request)'''
 
         return message_pb2.Empty()
 

@@ -5,8 +5,7 @@ import uuid
 # import the generated classes
 import message_pb2 as chat
 import message_pb2_grpc as rpc
-
-import hashlib
+from security import AESCipher
 
 from tkinter import *
 from tkinter import simpledialog
@@ -16,13 +15,15 @@ channel = grpc.insecure_channel('localhost:50051')
 
 LIMIT = 0 # limit
 
-def encrypt_string(hash_string):
-    return hashlib.sha256(hash_string.encode()).hexdigest()
+KEY = "hello world"
 
-def decrpt(str):
-    return hashlib.sha256(str.decode())
+cipher = AESCipher(key=KEY)
 
+def encrypt(n):
+    return cipher.encrypt(n)
 
+def decrypt(n):
+    return cipher.decrypt(n)
 
 class Client:
 
@@ -45,8 +46,10 @@ class Client:
         when waiting for new messages
         """
         for note in self.conn.ChatStream(chat.Empty()):
-            print("R[{}] {}".format(note.name, note.message))
-            self.chat_list.insert(END, "[{}] {}\n".format(note.name, note.message))
+            if not note is None:
+                name = decrypt(note.name)
+                message = decrypt(note.message)
+                self.chat_list.insert(END, "[{}] {}\n".format(name, message))
 
     def send_message(self, event):
         if time.time() - self.last < LIMIT:
@@ -63,11 +66,10 @@ class Client:
             self.entry_message.delete(0, 'end')
 
             n = chat.Note()
-            n.name = self.username
-            n.message = message
+            n.name = encrypt(self.username)
+            n.message = encrypt(message)
             n.uuid = str(uuid.uuid4())
-            print('uuid: ', n.uuid)
-            print("S[{}] {}".format(n.name, n.message))
+
             self.conn.SendNote(n)
 
     def __setup_ui(self):

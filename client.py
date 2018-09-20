@@ -23,9 +23,9 @@ cipher = AESCipher(key=KEY)
 
 
 def rate(func):
-    limit = 15  # seconds
+    limit = LIMIT  # seconds
 
-    def called(a, b, c, d, e):
+    def called(*args, **kwargs):
         print("a")
         print(called.timestamp)
         if time.time() - called.timestamp < limit:
@@ -34,7 +34,7 @@ def rate(func):
         called.timestamp = time.time()
 
         print(called.timestamp)
-        func(a, b, c, d, e)
+        func(*args, **kwargs)
 
     called.timestamp = 0
 

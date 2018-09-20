@@ -1,3 +1,5 @@
+import yaml
+
 import threading
 import grpc
 import time
@@ -13,17 +15,41 @@ from tkinter import simpledialog
 # open a gRPC channel
 channel = grpc.insecure_channel('localhost:50051')
 
-LIMIT = 0 # limit
+LIMIT = 0  # limit
 
 KEY = "hello world"
 
 cipher = AESCipher(key=KEY)
 
+
+def rate(func):
+    limit = 15  # seconds
+
+    def called(a, b, c, d, e):
+        print("a")
+        print(called.timestamp)
+        if time.time() - called.timestamp < limit:
+            return
+
+        called.timestamp = time.time()
+
+        print(called.timestamp)
+        func(a, b, c, d, e)
+
+    called.timestamp = 0
+
+    return called
+
+
+
+
 def encrypt(n):
     return cipher.encrypt(n)
 
+
 def decrypt(n):
     return cipher.decrypt(n)
+
 
 class Client:
 
@@ -51,11 +77,17 @@ class Client:
                 message = decrypt(note.message)
                 self.chat_list.insert(END, "[{}] {}\n".format(name, message))
 
-    def send_message(self, event):
-        if time.time() - self.last < LIMIT:
-            return
+    @staticmethod
+    @rate
+    def send_message(entry_message, message, name, uuid, conn):
+        entry_message.delete(0, 'end')
+        n = chat.Note()
+        n.name = encrypt(name)
+        n.message = encrypt(message)
+        n.uuid = str(uuid)
+        conn.SendNote(n)
 
-        self.last = time.time()
+    def send_action(self, event):
 
         """
         This method is called when user enters something into the textbox
@@ -63,14 +95,17 @@ class Client:
         message = self.entry_message.get()
 
         if message is not '':
+            self.send_message(self.entry_message, message, self.username, str(uuid.uuid4()), self.conn)
+            ''' 
             self.entry_message.delete(0, 'end')
-
             n = chat.Note()
             n.name = encrypt(self.username)
             n.message = encrypt(message)
             n.uuid = str(uuid.uuid4())
 
-            self.conn.SendNote(n)
+            self.conn.SendNote(n) '''
+
+
 
     def __setup_ui(self):
         self.chat_list = Text()
@@ -78,9 +113,10 @@ class Client:
         self.lbl_username = Label(self.window, text=self.username)
         self.lbl_username.pack(side=LEFT)
         self.entry_message = Entry(self.window, bd=5)
-        self.entry_message.bind('<Return>', self.send_message)
+        self.entry_message.bind('<Return>', self.send_action)
         self.entry_message.focus()
         self.entry_message.pack(side=BOTTOM)
+
 
 if __name__ == '__main__':
     root = Tk()

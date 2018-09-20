@@ -7,6 +7,20 @@ import time
 import message_pb2
 import message_pb2_grpc
 
+def lru_cache(state, func):
+    def cache(*args, **kwargs):
+        if state == 'cache':
+
+            cache.messages.put(*args, **kwargs)
+
+            pass
+
+        if state == 'fetch':
+            pass
+
+
+    cache.messages = LRUCache(capacity=20)
+
 class ChatService(message_pb2_grpc.ChatServerServicer):
     def __init__(self):
         self.chats = []
@@ -61,7 +75,7 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
 
         return message_pb2.Empty()
 
-
+def send(server, request): pass
 
 
 # create a gRPC server

@@ -1,6 +1,11 @@
 # Chat implementation using gRPC
 
-Run:
+Run server:
 ```
-  python3 main.py 
+  python3 server.py 
+```
+
+Run client:
+``` 
+  python3 client.py
 ```

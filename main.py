@@ -1,18 +1,34 @@
-def handler(func):
-    def foo(x):
-        foo.calls += 1
-        print(foo.calls)
-        if foo.calls % 2 == 0:
-            print("cannot call")
-        else:
-            func(x)
+def call_counter(func):
+    def helper(x):
+        helper.calls += 1
+        return func(x)
 
-    foo.calls = 0
-    return foo
+    helper.calls = 0
 
-@handler
-def tester(n):
-    print(n)
+    return helper
 
-for j in range(10):
-    tester(j)
+
+@call_counter
+def succ(x):
+    return x + 1
+
+
+print(succ.calls)
+for i in range(10):
+    succ(i)
+
+print(succ.calls)
+
+
+@call_counter
+def mul1(x, y=1):
+    return x * y + 1
+
+print( succ(10).helper.calls)
+class Foo:
+    def __init__(self): pass
+
+    @call_counter
+    def succ(self, x):
+        return x + 1
+

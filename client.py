@@ -117,7 +117,7 @@ class Client:
 
 if __name__ == '__main__':
 
-    chatName = None #'group1'
+    chatName = 'group1'
     if chatName is None:
         chatName = input("channel name: ")
 

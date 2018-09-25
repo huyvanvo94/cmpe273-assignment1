@@ -7,17 +7,19 @@ import message_pb2
 import message_pb2_grpc
 
 
-def lru_cache(state, func):
-    def cache(*args, **kwargs):
-        if state == 'cache':
-            cache.messages.put(*args, **kwargs)
+def lru_cache(func):
+    def cache(self, request, context):
+        print(' i am called ')
 
-            pass
+        if request.chatChannel not in self.chatChannels:
+            self.chatChannels[request.chatChannel] = Channel(capacity=10)
 
-        if state == 'fetch':
-            pass
+        if request.chatChannel in self.chatChannels:
+            self.chatChannels[request.chatChannel].append(request)
 
-    cache.messages = LRUCache(capacity=20)
+        return func(self, request, context)
+
+    return cache
 
 
 class ChatService(message_pb2_grpc.ChatServerServicer):
@@ -48,24 +50,10 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
                         channel.lastKnown = n
             except:
                 pass
-              #  print("error")
+            #  print("error")
 
+    @lru_cache
     def SendNote(self, request, context):
-
-        if request.chatChannel not in self.chatChannels:
-            self.chatChannels[request.chatChannel] = Channel(10)
-
-        try:
-            self.chatChannels[request.chatChannel].append( request )
-        except:
-            print("not in chat")
-        #  self.cache.put(self.index, request)
-        # self.index += 1
-        ''' 
-        if len(self.chats) >= self.max:
-            del self.chats[0]
-
-        self.chats.append(request)'''
 
         response = message_pb2.Empty()
         response.chatChannel = request.chatChannel
@@ -79,11 +67,25 @@ class Channel(object):
         self.index = 0
         self.lastKnow = 0
 
+    def foo(self):
+        pass
+
     def append(self, note):
         self.cache.put(self.index, note)
         self.index += 1
 
+    def goo(self):
+        pass
+
+    ''' 
+    def append(self, note):
+        self.cache.put(self.index, note)
+        self.index += 1
+
+    '''
+
     def get(self, page):
+        print('i am called')
         return self.cache.get(page)
 
 

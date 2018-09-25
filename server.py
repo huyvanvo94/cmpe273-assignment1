@@ -74,18 +74,7 @@ class Channel(object):
         self.cache.put(self.index, note)
         self.index += 1
 
-    def goo(self):
-        pass
-
-    ''' 
-    def append(self, note):
-        self.cache.put(self.index, note)
-        self.index += 1
-
-    '''
-
     def get(self, page):
-        print('i am called')
         return self.cache.get(page)
 
 

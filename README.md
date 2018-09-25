@@ -1,4 +1,4 @@
-# LRU Cache implementation 
+# Chat implementation using gRPC
 
 Run:
 ```

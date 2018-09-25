@@ -10,7 +10,6 @@ import message_pb2_grpc as rpc
 from security import AESCipher
 from tkinter import *
 
-chatName = 'group1'
 
 # open a gRPC channel
 channel = grpc.insecure_channel('localhost:50051')
@@ -51,7 +50,7 @@ def decrypt(n):
 
 class Client:
 
-    def __init__(self, u: str, window):
+    def __init__(self, u: str, window, chatName):
         # the frame to put ui components on
         self.window = window
         self.username = u
@@ -117,6 +116,11 @@ class Client:
 
 
 if __name__ == '__main__':
+
+    chatName = None #'group1'
+    if chatName is None:
+        chatName = input("channel name: ")
+
     root = Tk()
     frame = Frame(root, width=300, height=300)
     frame.pack()
@@ -126,4 +130,4 @@ if __name__ == '__main__':
         username = username[:10]
 
     root.deiconify()
-    c = Client(username, frame)
+    c = Client(username, frame, chatName)

@@ -7,6 +7,7 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -18,8 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
   syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n\rmessage.proto\"\x07\n\x05\x45mpty\"3\n\x04Note\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t2F\n\nChatServer\x12\x1d\n\nChatStream\x12\x06.Empty\x1a\x05.Note0\x01\x12\x19\n\x08SendNote\x12\x05.Note\x1a\x06.Emptyb\x06proto3')
+  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"H\n\x04Note\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2F\n\nChatServer\x12\x1d\n\nChatStream\x12\x06.Empty\x1a\x05.Note0\x01\x12\x19\n\x08SendNote\x12\x05.Note\x1a\x06.Emptyb\x06proto3')
 )
 
 
@@ -32,20 +32,27 @@ _EMPTY = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='chatChannel', full_name='Empty.chatChannel', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=24,
+  serialized_end=45,
 )
 
 
@@ -62,35 +69,42 @@ _NOTE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='Note.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='uuid', full_name='Note.uuid', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='chatChannel', full_name='Note.chatChannel', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=77,
+  serialized_start=47,
+  serialized_end=119,
 )
 
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
@@ -118,9 +132,9 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
   full_name='ChatServer',
   file=DESCRIPTOR,
   index=0,
-  serialized_options=None,
-  serialized_start=79,
-  serialized_end=149,
+  options=None,
+  serialized_start=121,
+  serialized_end=191,
   methods=[
   _descriptor.MethodDescriptor(
     name='ChatStream',
@@ -129,7 +143,7 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_EMPTY,
     output_type=_NOTE,
-    serialized_options=None,
+    options=None,
   ),
   _descriptor.MethodDescriptor(
     name='SendNote',
@@ -138,7 +152,7 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_NOTE,
     output_type=_EMPTY,
-    serialized_options=None,
+    options=None,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_CHATSERVER)

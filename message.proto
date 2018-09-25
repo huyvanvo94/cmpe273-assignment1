@@ -1,12 +1,15 @@
 syntax = "proto3";
 
-message Empty {}
+message Empty {
+    string chatChannel = 1;
+}
 
 // I called it Note because message Message is annoying to work with
 message Note {
     string name = 1;
     string message = 2;
     string uuid = 3;
+    string chatChannel = 4;
 }
 
 service ChatServer {

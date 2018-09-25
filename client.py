@@ -8,9 +8,9 @@ import uuid
 import message_pb2 as chat
 import message_pb2_grpc as rpc
 from security import AESCipher
-
 from tkinter import *
-from tkinter import simpledialog
+
+chatName = 'group1'
 
 # open a gRPC channel
 channel = grpc.insecure_channel('localhost:50051')
@@ -41,8 +41,6 @@ def rate(func):
     return called
 
 
-
-
 def encrypt(n):
     return cipher.encrypt(n)
 
@@ -70,21 +68,30 @@ class Client:
         """
         This method will be ran in a separate thread as the main/ui thread, because the for-in call is blocking
         when waiting for new messages
+
         """
-        for note in self.conn.ChatStream(chat.Empty()):
+        print(' listen for messages ')
+        request = chat.Empty()
+        request.chatChannel = chatName
+
+
+        for note in self.conn.ChatStream(request):
+            print(' i am called ')
             if not note is None:
+                print('foo bza')
                 name = decrypt(note.name)
                 message = decrypt(note.message)
                 self.chat_list.insert(END, "[{}] {}\n".format(name, message))
 
     @staticmethod
     @rate
-    def send_message(entry_message, message, name, uuid, conn):
+    def send_message(entry_message, message, name, uuid, conn, chatChannel):
         entry_message.delete(0, 'end')
         n = chat.Note()
         n.name = encrypt(name)
         n.message = encrypt(message)
         n.uuid = str(uuid)
+        n.chatChannel = chatChannel
         conn.SendNote(n)
 
     def send_action(self, event):
@@ -95,16 +102,7 @@ class Client:
         message = self.entry_message.get()
 
         if message is not '':
-            self.send_message(self.entry_message, message, self.username, str(uuid.uuid4()), self.conn)
-            ''' 
-            self.entry_message.delete(0, 'end')
-            n = chat.Note()
-            n.name = encrypt(self.username)
-            n.message = encrypt(message)
-            n.uuid = str(uuid.uuid4())
-
-            self.conn.SendNote(n) '''
-
+            self.send_message(self.entry_message, message, self.username, str(uuid.uuid4()), self.conn, chatName)
 
 
     def __setup_ui(self):

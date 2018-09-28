@@ -12,6 +12,9 @@ message Note {
     string chatChannel = 4;
 }
 
+
+
+
 service ChatServer {
     // This bi-directional stream makes it possible to send and receive Notes between 2 persons
     rpc ChatStream (Empty) returns (stream Note);

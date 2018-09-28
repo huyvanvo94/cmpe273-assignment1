@@ -53,6 +53,7 @@
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/ApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/GeneralTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-fall17" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/cmpe273-lab2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/misc.xml" afterDir="false" />
@@ -816,6 +817,7 @@
       <change afterPath="$PROJECT_DIR$/../untitled3/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled3/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled3/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled3/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled3/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled3/out/production/untitled3/com/company/Main.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled3/src/com/company/Main.java" afterDir="false" />
@@ -838,12 +840,17 @@
       <change beforePath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/com/cmpe226/ExampleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lru-cache.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/message.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe273-lab2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-lab2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../connect4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../connect4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-quiz1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/src/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/../docker_flask/venv/lib/python2.7/site-packages/pip/_internal/operations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/src/Node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../docker_flask/venv/lib/python2.7/site-packages/pip/_internal/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/src/reducer.node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../docker_flask/venv/lib/python2.7/site-packages/pip/_vendor/html5lib/filters/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../db-project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled3/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db-project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../db-project/src/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/src/main/java/com/cmpe226/controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../db-project/src/Application.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../db-project/web/WEB-INF/applicationContext.xml" beforeDir="false" />
@@ -914,91 +921,63 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/cmpe273_assignment1$security.coverage" NAME="security Coverage Results" MODIFIED="1536973254968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cmpe273_assignment1$main.coverage" NAME="main Coverage Results" MODIFIED="1537857242415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cmpe273_assignment1$main.coverage" NAME="main Coverage Results" MODIFIED="1538098298571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cmpe273_assignment1$server.coverage" NAME="server Coverage Results" MODIFIED="1536982930625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1349789697">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.4" value="5" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="2" />
           <entry key="md" value="79" />
-          <entry key="proto" value="72" />
-          <entry key="py" value="3140" />
+          <entry key="proto" value="75" />
+          <entry key="py" value="3160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="79" />
-          <entry key="PLAIN_TEXT" value="74" />
-          <entry key="Python" value="3140" />
+          <entry key="PLAIN_TEXT" value="77" />
+          <entry key="Python" value="3160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="proto" value="1" />
-          <entry key="py" value="11" />
-          <entry key="yaml" value="1" />
+          <entry key="proto" value="2" />
+          <entry key="py" value="13" />
+          <entry key="txt" value="1" />
+          <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="11" />
-          <entry key="YAML" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="13" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-487">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537864099355" expanded="true" signature="1638:2136" ph="..." />
-                <marker date="1537864099355" expanded="true" signature="1790:1804" ph="..." />
-                <marker date="1537864099355" expanded="true" signature="1930:1936" ph="..." />
-                <marker date="1537864099355" expanded="true" signature="2162:2170" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/grpc/_server.py">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1421">
-              <caret line="404" selection-start-line="404" selection-end-line="404" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537843556492" expanded="true" signature="2093:2318" ph="..." />
-                <marker date="1537843556492" expanded="true" signature="2348:2357" ph="..." />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -1006,7 +985,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lru_cache.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="240">
               <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
@@ -1024,6 +1003,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/message_pb2.py">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/message.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -1055,8 +1043,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="60">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -1072,14 +1069,14 @@
         <option value="$PROJECT_DIR$/lru.py" />
         <option value="$PROJECT_DIR$/test.sh" />
         <option value="$PROJECT_DIR$/security.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/config.yaml" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/message.proto" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/message.proto" />
       </list>
     </option>
   </component>
@@ -1090,7 +1087,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="28" />
     <option name="width" value="1680" />
     <option name="height" value="958" />
   </component>
@@ -1100,6 +1097,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1111,7 +1109,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1226,21 +1223,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="958" extended-state="6" />
+    <frame x="0" y="28" width="1680" height="958" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23015873" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23748474" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30574712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3048499" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32843137" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3360277" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22401847" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -1270,30 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lru-cache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1312,15 +1286,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.proto">
+    <entry file="file:///usr/local/lib/python3.7/site-packages/grpc/_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="5880">
+          <caret line="404" selection-start-line="404" selection-end-line="404" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message_pb2.py">
+    <entry file="file://$PROJECT_DIR$/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lru-cache.py" />
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1537864151960" expanded="true" signature="1638:1962" ph="..." />
+            <marker date="1537864151960" expanded="true" signature="1790:1804" ph="..." />
+            <marker date="1537864151960" expanded="true" signature="1988:1996" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lru.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message_pb2_grpc.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="87" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="87" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1332,67 +1355,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="87" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message_pb2_grpc.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lru.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
+    <entry file="file://$PROJECT_DIR$/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537843556492" expanded="true" signature="2093:2318" ph="..." />
-            <marker date="1537843556492" expanded="true" signature="2348:2357" ph="..." />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lru_cache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/message_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/grpc/_server.py">
+    <entry file="file://$PROJECT_DIR$/message.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="404" selection-start-line="404" selection-end-line="404" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537864099355" expanded="true" signature="1638:2136" ph="..." />
-            <marker date="1537864099355" expanded="true" signature="1790:1804" ph="..." />
-            <marker date="1537864099355" expanded="true" signature="1930:1936" ph="..." />
-            <marker date="1537864099355" expanded="true" signature="2162:2170" ph="..." />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

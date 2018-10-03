@@ -53,7 +53,6 @@
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/ApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/GeneralTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-fall17" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/cmpe273-lab2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/misc.xml" afterDir="false" />
@@ -840,13 +839,7 @@
       <change beforePath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/com/cmpe226/ExampleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/message.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_pb2_grpc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe273-lab2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-lab2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-quiz1/.idea/vcs.xml" afterDir="false" />
@@ -980,13 +973,13 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="-180">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1538557809197" expanded="true" signature="2076:2400" ph="..." />
-                <marker date="1538557809197" expanded="true" signature="2228:2242" ph="..." />
-                <marker date="1538557809197" expanded="true" signature="2426:2434" ph="..." />
+                <marker date="1538559564545" expanded="true" signature="2076:2400" ph="..." />
+                <marker date="1538559564545" expanded="true" signature="2228:2242" ph="..." />
+                <marker date="1538559564545" expanded="true" signature="2426:2434" ph="..." />
               </folding>
             </state>
           </provider>
@@ -995,10 +988,10 @@
       <file leaf-file-name="client.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="152">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1232,7 +1225,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.3044776" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32843137" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40696517" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32238805" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.099574015" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -1262,9 +1255,9 @@
           <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538557809197" expanded="true" signature="2076:2400" ph="..." />
-            <marker date="1538557809197" expanded="true" signature="2228:2242" ph="..." />
-            <marker date="1538557809197" expanded="true" signature="2426:2434" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2076:2400" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2228:2242" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2426:2434" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1411,23 +1404,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="-180">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538557809197" expanded="true" signature="2076:2400" ph="..." />
-            <marker date="1538557809197" expanded="true" signature="2228:2242" ph="..." />
-            <marker date="1538557809197" expanded="true" signature="2426:2434" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2076:2400" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2228:2242" ph="..." />
+            <marker date="1538559564545" expanded="true" signature="2426:2434" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        <state relative-caret-position="152">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

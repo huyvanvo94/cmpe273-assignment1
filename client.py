@@ -134,13 +134,25 @@ if __name__ == '__main__':
     print('[Spartan] Connected to Spartan Server at port {}.'.format(port))
     print('[Spartan] User list: {}'.format(users))
 
-    channelName = input('[Spartan] Enter a user whom you want to chat with:')
-    print('[Spartan] You are now ready to chat with {}.'.format(channelName))
+    for group in groups:
 
-
+        print('[Spartan] Group list: {}'.format(group))
     chatName = 'group1'
+    channelName = input('[Spartan] Enter a user/group whom you want to chat with:')
+    # user did not put in chat name
+    if channelName == '':
+        channelName = username.lower()
+
+    else:
+        print('[Spartan] You are now ready to chat with {}.'.format(channelName))
+        channelName = channelName.lower()
+
+    chatName = channelName
+
     if chatName is None:
         chatName = input("channel name: ")
+
+    print(channelName)
 
     root = Tk()
     frame = Frame(root, width=300, height=300)

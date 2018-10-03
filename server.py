@@ -107,7 +107,7 @@ message_pb2_grpc.add_ChatServerServicer_to_server(ChatService(), server)
 
 print('Spartan server started on port {}.'.format(port))
 server.add_insecure_port('[::]:50051')
-print('[::]:{}'.format(port))
+
 server.add_insecure_port('[::]:{}'.format(port))
 server.start()
 

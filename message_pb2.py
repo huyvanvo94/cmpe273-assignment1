@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"H\n\x04Note\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2F\n\nChatServer\x12\x1d\n\nChatStream\x12\x06.Empty\x1a\x05.Note0\x01\x12\x19\n\x08SendNote\x12\x05.Note\x1a\x06.Emptyb\x06proto3')
+  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"H\n\x04Note\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t\"8\n\x07Message\x12\x0f\n\x07\x63hannel\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\x12\x0b\n\x03who\x18\x03 \x01(\t2\x89\x01\n\nChatServer\x12\x1d\n\nChatStream\x12\x06.Empty\x1a\x05.Note0\x01\x12\x19\n\x08SendNote\x12\x05.Note\x1a\x06.Empty\x12$\n\nReceiveMsg\x12\x08.Message\x1a\x08.Message\"\x00\x30\x01\x12\x1b\n\x07PushMsg\x12\x08.Message\x1a\x06.Emptyb\x06proto3')
 )
 
 
@@ -107,8 +107,54 @@ _NOTE = _descriptor.Descriptor(
   serialized_end=119,
 )
 
+
+_MESSAGE = _descriptor.Descriptor(
+  name='Message',
+  full_name='Message',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='channel', full_name='Message.channel', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='content', full_name='Message.content', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='who', full_name='Message.who', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=121,
+  serialized_end=177,
+)
+
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['Note'] = _NOTE
+DESCRIPTOR.message_types_by_name['Message'] = _MESSAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
@@ -125,6 +171,13 @@ Note = _reflection.GeneratedProtocolMessageType('Note', (_message.Message,), dic
   ))
 _sym_db.RegisterMessage(Note)
 
+Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGE,
+  __module__ = 'message_pb2'
+  # @@protoc_insertion_point(class_scope:Message)
+  ))
+_sym_db.RegisterMessage(Message)
+
 
 
 _CHATSERVER = _descriptor.ServiceDescriptor(
@@ -133,8 +186,8 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=121,
-  serialized_end=191,
+  serialized_start=180,
+  serialized_end=317,
   methods=[
   _descriptor.MethodDescriptor(
     name='ChatStream',
@@ -151,6 +204,24 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
     index=1,
     containing_service=None,
     input_type=_NOTE,
+    output_type=_EMPTY,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ReceiveMsg',
+    full_name='ChatServer.ReceiveMsg',
+    index=2,
+    containing_service=None,
+    input_type=_MESSAGE,
+    output_type=_MESSAGE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PushMsg',
+    full_name='ChatServer.PushMsg',
+    index=3,
+    containing_service=None,
+    input_type=_MESSAGE,
     output_type=_EMPTY,
     options=None,
   ),

@@ -5,6 +5,16 @@ from lru import LRUCache
 import time
 import message_pb2
 import message_pb2_grpc
+import yaml
+f = open('config.yaml', 'r')
+doc = yaml.load(f)
+
+users = doc['users']
+port = doc['port']
+max_num_messages_per_user = doc['max_num_messages_per_user']
+groups = doc['groups']
+group1 = groups['group1']
+group2 = groups['group2']
 
 
 def lru_cache(func):
@@ -29,6 +39,8 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
         self.index = 0
         self.lastKnown = 0
         self.cache = LRUCache(capacity=self.max)
+
+        self.channels = []
 
     def ChatStream(self, request, context):
 
@@ -60,6 +72,13 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
 
         return response
 
+    def PushMsg(self, request, context):
+        channel = request.channel
+        content = request.content
+        who = request.who 
+
+
+        return message_pb2.Empty()
 
 class Channel(object):
     def __init__(self, capacity):
@@ -86,9 +105,10 @@ server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 
 message_pb2_grpc.add_ChatServerServicer_to_server(ChatService(), server)
 
-# listen on port 50051
-print('Starting server. Listening on port 50051.')
+print('Spartan server started on port {}.'.format(port))
 server.add_insecure_port('[::]:50051')
+print('[::]:{}'.format(port))
+server.add_insecure_port('[::]:{}'.format(port))
 server.start()
 
 # since server.start() will not block,

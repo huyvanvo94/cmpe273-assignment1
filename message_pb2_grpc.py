@@ -24,6 +24,16 @@ class ChatServerStub(object):
         request_serializer=message__pb2.Note.SerializeToString,
         response_deserializer=message__pb2.Empty.FromString,
         )
+    self.ReceiveMsg = channel.unary_stream(
+        '/ChatServer/ReceiveMsg',
+        request_serializer=message__pb2.Message.SerializeToString,
+        response_deserializer=message__pb2.Message.FromString,
+        )
+    self.PushMsg = channel.unary_unary(
+        '/ChatServer/PushMsg',
+        request_serializer=message__pb2.Message.SerializeToString,
+        response_deserializer=message__pb2.Empty.FromString,
+        )
 
 
 class ChatServerServicer(object):
@@ -44,6 +54,20 @@ class ChatServerServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ReceiveMsg(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def PushMsg(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_ChatServerServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -55,6 +79,16 @@ def add_ChatServerServicer_to_server(servicer, server):
       'SendNote': grpc.unary_unary_rpc_method_handler(
           servicer.SendNote,
           request_deserializer=message__pb2.Note.FromString,
+          response_serializer=message__pb2.Empty.SerializeToString,
+      ),
+      'ReceiveMsg': grpc.unary_stream_rpc_method_handler(
+          servicer.ReceiveMsg,
+          request_deserializer=message__pb2.Message.FromString,
+          response_serializer=message__pb2.Message.SerializeToString,
+      ),
+      'PushMsg': grpc.unary_unary_rpc_method_handler(
+          servicer.PushMsg,
+          request_deserializer=message__pb2.Message.FromString,
           response_serializer=message__pb2.Empty.SerializeToString,
       ),
   }

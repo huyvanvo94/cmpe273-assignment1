@@ -1,5 +1,4 @@
-import yaml
-
+import sys
 import threading
 import grpc
 import time
@@ -10,9 +9,23 @@ import message_pb2_grpc as rpc
 from security import AESCipher
 from tkinter import *
 
+import yaml
+f = open('config.yaml', 'r')
+doc = yaml.load(f)
+
+users = doc['users']
+port = doc['port']
+max_num_messages_per_user = doc['max_num_messages_per_user']
+groups = doc['groups']
+group1 = groups['group1']
+group2 = groups['group2']
+print(doc)
 
 # open a gRPC channel
-channel = grpc.insecure_channel('localhost:50051')
+
+
+print('localhost:{}'.format(port))
+channel = grpc.insecure_channel('localhost:{}'.format(port))# grpc.insecure_channel('localhost:50051')
 
 LIMIT = 0  # limit
 
@@ -101,7 +114,7 @@ class Client:
         message = self.entry_message.get()
 
         if message is not '':
-            self.send_message(self.entry_message, message, self.username, str(uuid.uuid4()), self.conn, chatName)
+            self.send_message(self.entry_message, message, self.username, self.username, self.conn, chatName)
 
 
     def __setup_ui(self):
@@ -116,6 +129,14 @@ class Client:
 
 
 if __name__ == '__main__':
+    username = sys.argv[1]
+
+    print('[Spartan] Connected to Spartan Server at port {}.'.format(port))
+    print('[Spartan] User list: {}'.format(users))
+
+    channelName = input('[Spartan] Enter a user whom you want to chat with:')
+    print('[Spartan] You are now ready to chat with {}.'.format(channelName))
+
 
     chatName = 'group1'
     if chatName is None:
@@ -125,9 +146,6 @@ if __name__ == '__main__':
     frame = Frame(root, width=300, height=300)
     frame.pack()
     root.withdraw()
-    username = str(uuid.uuid1())
-    if len(username) >= 10:
-        username = username[:10]
 
     root.deiconify()
     c = Client(username, frame, chatName)

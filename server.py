@@ -16,13 +16,12 @@ groups = doc['groups']
 group1 = groups['group1']
 group2 = groups['group2']
 
-
 def lru_cache(func):
     def cache(self, request, context):
         print(' i am called ')
 
         if request.chatChannel not in self.chatChannels:
-            self.chatChannels[request.chatChannel] = Channel(capacity=10)
+            self.chatChannels[request.chatChannel] = Channel(capacity=max_num_messages_per_user)
 
         if request.chatChannel in self.chatChannels:
             self.chatChannels[request.chatChannel].append(request)

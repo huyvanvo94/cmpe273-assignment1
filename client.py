@@ -19,6 +19,7 @@ max_num_messages_per_user = doc['max_num_messages_per_user']
 groups = doc['groups']
 group1 = groups['group1']
 group2 = groups['group2']
+max_call_per_30_seconds_per_user = doc['max_call_per_30_seconds_per_user']
 print(doc)
 
 # open a gRPC channel
@@ -27,7 +28,7 @@ print(doc)
 print('localhost:{}'.format(port))
 channel = grpc.insecure_channel('localhost:{}'.format(port))# grpc.insecure_channel('localhost:50051')
 
-LIMIT = 0  # limit
+count = 0
 
 KEY = "hello world"
 
@@ -35,18 +36,32 @@ cipher = AESCipher(key=KEY)
 
 
 def rate(func):
-    limit = LIMIT  # seconds
+    limit = 10 # 30 seconds
 
     def called(*args, **kwargs):
-        print("a")
-        print(called.timestamp)
-        if time.time() - called.timestamp < limit:
+        global max_call_per_30_seconds_per_user, count
+
+        diff = time.time() - called.timestamp
+        print(diff)
+        print('count ', count)
+        print(count >= max_call_per_30_seconds_per_user and diff < limit)
+        if (count >= max_call_per_30_seconds_per_user and diff < limit) != False:
+            print('YO')
             return
 
-        called.timestamp = time.time()
+        if count == 0 and diff < limit:
+            return
 
-        print(called.timestamp)
-        func(*args, **kwargs)
+        if count < max_call_per_30_seconds_per_user and diff >= limit:
+
+            print('a')
+            count += 1
+            func(*args, **kwargs)
+            if count >= max_call_per_30_seconds_per_user:
+                count = 0
+                called.timestamp = time.time()
+
+        print('yo')
 
     called.timestamp = 0
 

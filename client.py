@@ -24,10 +24,6 @@ print(doc)
 
 # open a gRPC channel
 
-
-print('localhost:{}'.format(port))
-channel = grpc.insecure_channel('localhost:{}'.format(port))# grpc.insecure_channel('localhost:50051')
-
 count = 0
 
 KEY = "hello world"
@@ -36,6 +32,7 @@ cipher = AESCipher(key=KEY)
 
 
 def rate(func):
+    # TODO: Change this when turning in
     limit = 10 # 30 seconds
 
     def called(*args, **kwargs):

@@ -5,7 +5,7 @@ message Empty {
 }
 
 // I called it Note because message Message is annoying to work with
-message Note {
+message Message {
     string name = 1;
     string message = 2;
     string uuid = 3;
@@ -15,8 +15,8 @@ message Note {
 
 service ChatServer {
     // This bi-directional stream makes it possible to send and receive Notes between 2 persons
-    rpc ChatStream (Empty) returns (stream Note) {}
-    rpc SendNote (Note) returns (Empty);
+    rpc ChatStream (Empty) returns (stream Message) {}
+    rpc SendNote (Message) returns (Empty);
 
   //  rpc ReceiveMsg(Message) returns (stream Message) {}
   //  rpc PushMsg(Message) returns (Empty);

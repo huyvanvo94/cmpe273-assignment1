@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"H\n\x04Note\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2H\n\nChatServer\x12\x1f\n\nChatStream\x12\x06.Empty\x1a\x05.Note\"\x00\x30\x01\x12\x19\n\x08SendNote\x12\x05.Note\x1a\x06.Emptyb\x06proto3')
+  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"K\n\x07Message\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2N\n\nChatServer\x12\"\n\nChatStream\x12\x06.Empty\x1a\x08.Message\"\x00\x30\x01\x12\x1c\n\x08SendNote\x12\x08.Message\x1a\x06.Emptyb\x06proto3')
 )
 
 
@@ -56,36 +56,36 @@ _EMPTY = _descriptor.Descriptor(
 )
 
 
-_NOTE = _descriptor.Descriptor(
-  name='Note',
-  full_name='Note',
+_MESSAGE = _descriptor.Descriptor(
+  name='Message',
+  full_name='Message',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='Note.name', index=0,
+      name='name', full_name='Message.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='message', full_name='Note.message', index=1,
+      name='message', full_name='Message.message', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='uuid', full_name='Note.uuid', index=2,
+      name='uuid', full_name='Message.uuid', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='chatChannel', full_name='Note.chatChannel', index=3,
+      name='chatChannel', full_name='Message.chatChannel', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -104,11 +104,11 @@ _NOTE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=47,
-  serialized_end=119,
+  serialized_end=122,
 )
 
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
-DESCRIPTOR.message_types_by_name['Note'] = _NOTE
+DESCRIPTOR.message_types_by_name['Message'] = _MESSAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
@@ -118,12 +118,12 @@ Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), d
   ))
 _sym_db.RegisterMessage(Empty)
 
-Note = _reflection.GeneratedProtocolMessageType('Note', (_message.Message,), dict(
-  DESCRIPTOR = _NOTE,
+Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGE,
   __module__ = 'message_pb2'
-  # @@protoc_insertion_point(class_scope:Note)
+  # @@protoc_insertion_point(class_scope:Message)
   ))
-_sym_db.RegisterMessage(Note)
+_sym_db.RegisterMessage(Message)
 
 
 
@@ -133,8 +133,8 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=121,
-  serialized_end=193,
+  serialized_start=124,
+  serialized_end=202,
   methods=[
   _descriptor.MethodDescriptor(
     name='ChatStream',
@@ -142,7 +142,7 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
     index=0,
     containing_service=None,
     input_type=_EMPTY,
-    output_type=_NOTE,
+    output_type=_MESSAGE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -150,7 +150,7 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
     full_name='ChatServer.SendNote',
     index=1,
     containing_service=None,
-    input_type=_NOTE,
+    input_type=_MESSAGE,
     output_type=_EMPTY,
     options=None,
   ),

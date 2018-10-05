@@ -17,11 +17,11 @@ class ChatServerStub(object):
     self.ChatStream = channel.unary_stream(
         '/ChatServer/ChatStream',
         request_serializer=message__pb2.Empty.SerializeToString,
-        response_deserializer=message__pb2.Note.FromString,
+        response_deserializer=message__pb2.Message.FromString,
         )
     self.SendNote = channel.unary_unary(
         '/ChatServer/SendNote',
-        request_serializer=message__pb2.Note.SerializeToString,
+        request_serializer=message__pb2.Message.SerializeToString,
         response_deserializer=message__pb2.Empty.FromString,
         )
 
@@ -50,11 +50,11 @@ def add_ChatServerServicer_to_server(servicer, server):
       'ChatStream': grpc.unary_stream_rpc_method_handler(
           servicer.ChatStream,
           request_deserializer=message__pb2.Empty.FromString,
-          response_serializer=message__pb2.Note.SerializeToString,
+          response_serializer=message__pb2.Message.SerializeToString,
       ),
       'SendNote': grpc.unary_unary_rpc_method_handler(
           servicer.SendNote,
-          request_deserializer=message__pb2.Note.FromString,
+          request_deserializer=message__pb2.Message.FromString,
           response_serializer=message__pb2.Empty.SerializeToString,
       ),
   }

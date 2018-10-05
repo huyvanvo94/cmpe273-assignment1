@@ -113,7 +113,7 @@ class Client:
     @staticmethod
     def send_message(entry_message, message, name, uuid, conn, chatChannel):
         entry_message.delete(0, 'end')
-        n = chat.Note()
+        n = chat.Message()
         n.name = encrypt(name)
         n.message = encrypt(message)
         n.uuid = str(uuid)

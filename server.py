@@ -89,6 +89,7 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
         self.cache = LRUCache(capacity=self.max)
         self.lastMessage = None
         self.channels = []
+        self.recent = {}
 
     def ReceiveMsg(self, request, context):
         allmsg = False
@@ -112,17 +113,18 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
                         channel.lastKnown = n
 
                 if allmsg == False:
-                    self.lastMessage = None
+                    print('yo!!!')
+                    self.recent[request.chatChannel] = None
                     allmsg = True
                     continue
 
                 if allmsg:
 
-                    if not self.lastMessage is None:
+                    if not self.recent[request.chatChannel] is None:
                         print('recent')
-                        yield self.lastMessage
+                        yield self.recent[request.chatChannel]
 
-                        self.lastMessage = None
+                        self.recent[request.chatChannel] = None
 
 
             except:
@@ -147,7 +149,8 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
 
     @lru_cache
     def save(self, request):
-        self.lastMessage = request
+        name = request.chatChannel
+        self.recent[name] = request
 
 
 class Channel(object):

@@ -6,6 +6,7 @@ import time
 import message_pb2
 import message_pb2_grpc
 import yaml
+
 f = open('config.yaml', 'r')
 doc = yaml.load(f)
 
@@ -15,9 +16,57 @@ max_num_messages_per_user = doc['max_num_messages_per_user']
 groups = doc['groups']
 group1 = groups['group1']
 group2 = groups['group2']
+max_call_per_30_seconds_per_user = doc['max_call_per_30_seconds_per_user']
+# the users online
+
+usersOnline = {}
+
+limit = 10  # 30
+
+
+def rate(func):
+    def called(self, request):
+        global usersOnline
+        user = request.uuid
+
+        # first
+        if user not in usersOnline:
+            timestamp = 0
+            count = 1
+            usersOnline[user] = (timestamp, count)
+            print(1)
+
+            func(self, request)
+            return
+
+        global max_num_messages_per_user
+
+        timestamp = usersOnline[user][0]
+        count = usersOnline[user][1]
+
+        diff = time.time() - timestamp
+
+        if (count >= max_call_per_30_seconds_per_user and diff < limit) != False or count == 0 and diff < limit:
+            print('YO')
+
+            return
+
+        if count < max_call_per_30_seconds_per_user and diff >= limit:
+            print(3)
+            count += 1
+
+            func(self, request)
+            if count >= max_call_per_30_seconds_per_user:
+                count = 0
+                timestamp = time.time()
+
+            usersOnline[user] = (timestamp, count)
+
+    return called
+
 
 def lru_cache(func):
-    def cache(self, request, context):
+    def cache(self, request):
         print(' i am called ')
 
         if request.chatChannel not in self.chatChannels:
@@ -26,7 +75,7 @@ def lru_cache(func):
         if request.chatChannel in self.chatChannels:
             self.chatChannels[request.chatChannel].append(request)
 
-        return func(self, request, context)
+        return func(self, request)
 
     return cache
 
@@ -63,21 +112,32 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
                 pass
             #  print("error")
 
-    @lru_cache
+    # @lru_cache
+
     def SendNote(self, request, context):
 
         response = message_pb2.Empty()
         response.chatChannel = request.chatChannel
 
+        self.handleRequest(request)
+
         return response
+
+    @rate
+    def handleRequest(self, request):
+        self.save(request)
+
+
+    @lru_cache
+    def save(self, request): pass
 
     def PushMsg(self, request, context):
         channel = request.channel
         content = request.content
-        who = request.who 
-
+        who = request.who
 
         return message_pb2.Empty()
+
 
 class Channel(object):
     def __init__(self, capacity):
@@ -96,9 +156,26 @@ class Channel(object):
         return self.cache.get(page)
 
 
-def send(server, request): pass
+def rate(func):
+    pass
 
 
+# Limit how many time users can send to server
+class UsersManager:
+    def __init__(self):
+        self.users = {}
+        # TODO: Change this when turning in
+        self.limit = 10  # 30 seconds
+
+    def isOnline(self, uuid):
+        return uuid in self.users
+
+    def msgReceived(self, uuid):
+        if uuid not in self.users:
+            self.users[uuid] = (0, 0)
+
+
+manager = UsersManager()
 # create a gRPC server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 

@@ -1,3 +1,6 @@
+#TODO: update implementation limit on server side
+
+
 import sys
 import threading
 import grpc
@@ -108,7 +111,6 @@ class Client:
                 self.chat_list.insert(END, "[{}] {}\n".format(name, message))
 
     @staticmethod
-    @rate
     def send_message(entry_message, message, name, uuid, conn, chatChannel):
         entry_message.delete(0, 'end')
         n = chat.Note()

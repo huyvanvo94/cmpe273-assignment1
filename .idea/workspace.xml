@@ -53,7 +53,6 @@
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/ApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe226project/src/test/java/com/cmpe226/project/cmpe226project/GeneralTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-fall17" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/cmpe273-lab2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cmpe273-lab2/.idea/misc.xml" afterDir="false" />
@@ -841,7 +840,6 @@
       <change beforePath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/com/cmpe226/ExampleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe273-lab2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-lab2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-quiz1/.idea/vcs.xml" afterDir="false" />
@@ -1002,13 +1000,13 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+            <state relative-caret-position="576">
+              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1538743771348" expanded="true" signature="3833:4205" ph="..." />
-                <marker date="1538743771348" expanded="true" signature="3985:3999" ph="..." />
-                <marker date="1538743771348" expanded="true" signature="4526:4554" ph="..." />
+                <marker date="1538744990891" expanded="true" signature="3833:4156" ph="..." />
+                <marker date="1538744990891" expanded="true" signature="3985:3999" ph="..." />
+                <marker date="1538744990891" expanded="true" signature="4156:4157" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1398,9 +1396,9 @@
           <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538743771348" expanded="true" signature="3833:4205" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="3985:3999" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="4526:4554" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3833:4156" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3985:3999" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="4156:4157" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1411,9 +1409,9 @@
           <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538743771348" expanded="true" signature="3833:4205" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="3985:3999" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="4526:4554" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3833:4156" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3985:3999" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="4156:4157" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1591,13 +1589,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+        <state relative-caret-position="576">
+          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538743771348" expanded="true" signature="3833:4205" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="3985:3999" ph="..." />
-            <marker date="1538743771348" expanded="true" signature="4526:4554" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3833:4156" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="3985:3999" ph="..." />
+            <marker date="1538744990891" expanded="true" signature="4156:4157" ph="..." />
           </folding>
         </state>
       </provider>

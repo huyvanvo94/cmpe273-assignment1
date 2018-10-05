@@ -170,23 +170,6 @@ class Channel(object):
         return self.cache.get(page)
 
 
-
-# Limit how many time users can send to server
-class UsersManager:
-    def __init__(self):
-        self.users = {}
-        # TODO: Change this when turning in
-        self.limit = 10  # 30 seconds
-
-    def isOnline(self, uuid):
-        return uuid in self.users
-
-    def msgReceived(self, uuid):
-        if uuid not in self.users:
-            self.users[uuid] = (0, 0)
-
-
-manager = UsersManager()
 # create a gRPC server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 

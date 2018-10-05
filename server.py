@@ -87,11 +87,11 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
         self.index = 0
         self.lastKnown = 0
         self.cache = LRUCache(capacity=self.max)
-
+        self.lastMessage = None
         self.channels = []
 
     def ReceiveMsg(self, request, context):
-
+        allmsg = False
         lastindex = 0
 
         # For every client a infinite loop starts (in gRPC's own managed thread)
@@ -100,14 +100,31 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
             try:
                 channel = self.chatChannels[request.chatChannel]
                 # Check if there are any new messages
-                while channel.index > lastindex:
+
+
+                while channel.index > lastindex and allmsg == False:
+                    print('cache')
                     n = channel.get(lastindex)
-                    print(n)
                     lastindex += 1
                     if n != -1:
                         yield n
                     else:
                         channel.lastKnown = n
+
+                if allmsg == False:
+                    self.lastMessage = None
+                    allmsg = True
+                    continue
+
+                if allmsg:
+
+                    if not self.lastMessage is None:
+                        print('recent')
+                        yield self.lastMessage
+
+                        self.lastMessage = None
+
+
             except:
                 pass
             #  print("error")
@@ -129,14 +146,8 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
 
 
     @lru_cache
-    def save(self, request): pass
-
-    def PushMsg(self, request, context):
-        channel = request.channel
-        content = request.content
-        who = request.who
-
-        return message_pb2.Empty()
+    def save(self, request):
+        self.lastMessage = request
 
 
 class Channel(object):
@@ -155,9 +166,6 @@ class Channel(object):
     def get(self, page):
         return self.cache.get(page)
 
-
-def rate(func):
-    pass
 
 
 # Limit how many time users can send to server

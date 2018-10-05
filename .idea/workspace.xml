@@ -840,6 +840,11 @@
       <change beforePath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe226project/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe226project/src/main/java/com/cmpe226/ExampleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/message.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_pb2_grpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cmpe273-lab2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-lab2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmpe273-quiz1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../connect4/src/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/../docker_flask/venv/lib/python2.7/site-packages/pip/_internal/operations/__init__.py" afterDir="false" />
@@ -929,8 +934,8 @@
             <file leaf-file-name="client.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/client.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="450">
-                    <caret line="119" selection-start-line="119" selection-end-line="119" />
+                  <state relative-caret-position="133">
+                    <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
                     <folding>
                       <element signature="e#52#62#0" expanded="true" />
                     </folding>
@@ -992,16 +997,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="137">
+              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1538735685134" expanded="true" signature="3370:3768" ph="..." />
-                <marker date="1538735685134" expanded="true" signature="3522:3536" ph="..." />
-                <marker date="1538735685134" expanded="true" signature="4089:4117" ph="..." />
+                <marker date="1538736125354" expanded="true" signature="3370:3768" ph="..." />
+                <marker date="1538736125354" expanded="true" signature="3522:3536" ph="..." />
+                <marker date="1538736125354" expanded="true" signature="4089:4117" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1016,11 +1021,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.proto" pinned="false" current-in-tab="true">
+      <file leaf-file-name="message.proto" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/message.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -1094,8 +1099,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/config.yaml" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/message.proto" />
+        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/client.py" />
       </list>
     </option>
@@ -1415,9 +1420,9 @@
           <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538735685134" expanded="true" signature="3370:3768" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="3522:3536" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="4089:4117" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="3370:3768" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="3522:3536" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="4089:4117" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1428,9 +1433,9 @@
           <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538735685134" expanded="true" signature="3370:3768" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="3522:3536" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="4089:4117" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="3370:3768" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="3522:3536" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="4089:4117" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1581,36 +1586,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1538735685134" expanded="true" signature="3370:3768" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="3522:3536" ph="..." />
-            <marker date="1538735685134" expanded="true" signature="4089:4117" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/message_pb2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/message.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="133">
+          <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
           <folding>
             <element signature="e#52#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.proto">
+    <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="137">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1538736125354" expanded="true" signature="3370:3768" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="3522:3536" ph="..." />
+            <marker date="1538736125354" expanded="true" signature="4089:4117" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

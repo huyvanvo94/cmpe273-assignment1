@@ -14,9 +14,9 @@ class ChatServerStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.ChatStream = channel.unary_stream(
-        '/ChatServer/ChatStream',
-        request_serializer=message__pb2.Empty.SerializeToString,
+    self.ReceiveMsg = channel.unary_stream(
+        '/ChatServer/ReceiveMsg',
+        request_serializer=message__pb2.Message.SerializeToString,
         response_deserializer=message__pb2.Message.FromString,
         )
     self.SendNote = channel.unary_unary(
@@ -30,7 +30,7 @@ class ChatServerServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def ChatStream(self, request, context):
+  def ReceiveMsg(self, request, context):
     """This bi-directional stream makes it possible to send and receive Notes between 2 persons
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -47,9 +47,9 @@ class ChatServerServicer(object):
 
 def add_ChatServerServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'ChatStream': grpc.unary_stream_rpc_method_handler(
-          servicer.ChatStream,
-          request_deserializer=message__pb2.Empty.FromString,
+      'ReceiveMsg': grpc.unary_stream_rpc_method_handler(
+          servicer.ReceiveMsg,
+          request_deserializer=message__pb2.Message.FromString,
           response_serializer=message__pb2.Message.SerializeToString,
       ),
       'SendNote': grpc.unary_unary_rpc_method_handler(

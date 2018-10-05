@@ -98,11 +98,11 @@ class Client:
 
         """
         print(' listen for messages ')
-        request = chat.Empty()
+        request = chat.Message()
         request.chatChannel = chatName
 
 
-        for note in self.conn.ChatStream(request):
+        for note in self.conn.ReceiveMsg(request):
             print(' i am called ')
             if not note is None:
                 print('foo bza')

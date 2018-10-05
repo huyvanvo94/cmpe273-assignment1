@@ -90,7 +90,7 @@ class ChatService(message_pb2_grpc.ChatServerServicer):
 
         self.channels = []
 
-    def ChatStream(self, request, context):
+    def ReceiveMsg(self, request, context):
 
         lastindex = 0
 

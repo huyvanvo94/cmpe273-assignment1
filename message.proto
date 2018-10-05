@@ -15,9 +15,8 @@ message Message {
 
 service ChatServer {
     // This bi-directional stream makes it possible to send and receive Notes between 2 persons
-    rpc ChatStream (Empty) returns (stream Message) {}
+    rpc ReceiveMsg(Message) returns (stream Message) {}
     rpc SendNote (Message) returns (Empty);
 
-  //  rpc ReceiveMsg(Message) returns (stream Message) {}
-  //  rpc PushMsg(Message) returns (Empty);
+
 }

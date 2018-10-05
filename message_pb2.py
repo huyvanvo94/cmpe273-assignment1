@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"K\n\x07Message\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2N\n\nChatServer\x12\"\n\nChatStream\x12\x06.Empty\x1a\x08.Message\"\x00\x30\x01\x12\x1c\n\x08SendNote\x12\x08.Message\x1a\x06.Emptyb\x06proto3')
+  serialized_pb=_b('\n\rmessage.proto\"\x1c\n\x05\x45mpty\x12\x13\n\x0b\x63hatChannel\x18\x01 \x01(\t\"K\n\x07Message\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0c\n\x04uuid\x18\x03 \x01(\t\x12\x13\n\x0b\x63hatChannel\x18\x04 \x01(\t2P\n\nChatServer\x12$\n\nReceiveMsg\x12\x08.Message\x1a\x08.Message\"\x00\x30\x01\x12\x1c\n\x08SendNote\x12\x08.Message\x1a\x06.Emptyb\x06proto3')
 )
 
 
@@ -134,14 +134,14 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=124,
-  serialized_end=202,
+  serialized_end=204,
   methods=[
   _descriptor.MethodDescriptor(
-    name='ChatStream',
-    full_name='ChatServer.ChatStream',
+    name='ReceiveMsg',
+    full_name='ChatServer.ReceiveMsg',
     index=0,
     containing_service=None,
-    input_type=_EMPTY,
+    input_type=_MESSAGE,
     output_type=_MESSAGE,
     options=None,
   ),

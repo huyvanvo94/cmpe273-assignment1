@@ -117,6 +117,7 @@ class Client:
         n.name = encrypt(name)
         n.message = encrypt(message)
         n.uuid = str(uuid)
+
         n.chatChannel = chatChannel
         conn.SendNote(n)
 
